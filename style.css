@@ -14,7 +14,7 @@ main{
 }
 .container {
     background-color: #FFFFFF;
-    width: 870px;
+    width: 70%;
     padding: 30px;
     margin-top: 30px;
     border-radius: 7px;
@@ -128,4 +128,221 @@ hr{
     font-size: 14px;
     border-radius: 15px;
     padding: 4px 4px;
+}
+
+/* -------------------------------------- Media Queries -------------------------------------------------- */
+/* --------------  For Mobile View ---------------- */
+@media only screen and (max-width: 480px) {
+    /* Top Player area  */
+    .container {
+        margin: 15px 0;
+        width: 100%;
+        padding: 15px 0;
+    }
+    .top-players{
+        margin-bottom: 20px;
+    }
+    .section-title {
+        text-align: center;
+    }
+    .players{
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 15px;
+        padding-left: 5px;
+        padding-right: 7px;
+        
+    }
+    .player-name {
+        margin-left: 8px;
+        font-size: 16px;
+    }
+    hr {
+        margin-bottom: 20px;
+    }
+
+    /* Top Blog Area  */
+    
+    .blogs{
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 15px;
+        padding-left: 20px;
+        padding-right: 7px;
+    }
+    .blog{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .blog .thumbnail img {
+        width: 80%;
+        height: 100%;
+    }
+    .blog-info {
+        margin-left: 5px;
+    }
+
+    /* Latest Courses  */
+
+    .courses {
+        flex-direction: column;
+        align-items: center;
+    }
+    .course {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+    .course img{
+        width: 100%;
+        height: 150px;
+    }
+}
+
+
+/* ------------------ For Mobile landscap and tablet View ------------------ */
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    /* Top Player area  */
+    .container {
+        margin: 15px 0;
+        width: 100%;
+        padding: 15px 0;
+    }
+    .top-players{
+        margin-bottom: 20px;
+        padding-left: 20px;
+    }
+    .players{
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 15px;
+        
+    }
+    .player-name {
+        margin-left: 10px;
+        font-size: 16px;
+    }
+    hr {
+        margin-bottom: 20px;
+    }
+
+    /* Top Blogs Area  */
+
+    .top-blogs {
+        padding-left: 20px;
+        padding-right: 7px;
+    }
+    .blogs{
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 15px;
+        grid-column-gap: 15px;
+    }
+    .blog{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .blog .blog-info{
+        margin: 0;
+    }
+    .blog .thumbnail img {
+        width: 80%;
+        height: 100%;
+    }
+
+
+    /* Latest Course Area  */
+
+   #uniqe-title {
+       padding-left: 20px;
+   }
+    .courses {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 30px;
+        justify-items:center;
+    }
+    .course {
+        width: 80%;
+    }
+    .course img{
+        width: 100%;
+        height: 150px;
+    }
+}
+
+
+/* ---------------------------- For Tablet landscape, Laptop and small Desktops --------------------------------- */
+
+@media only screen and (min-width: 769px) and (max-width: 1279px) {
+    
+
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* Common Style  */
+
+    .container {
+        background-color: #FFFFFF;
+        width: 90%;
+        margin: 30px 0;
+        padding: 0;    /* this is for removing padding from all side, which is given in the main design container class */
+        padding: 20px 0;
+        border-radius: 7px;
+    }
+    
+    /* Top Player style  */
+
+    .top-players {
+        margin-bottom: 25px;
+        padding-left: 30px;
+    }
+    .players{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-row-gap: 30px;
+    }
+    .player{
+        display: flex;
+        align-items: center;
+    }
+    hr{
+        margin-bottom: 25px;
+    }
+    
+    /* Top Blog Style  */
+    
+    .top-blogs {
+        padding-left: 30px;
+        padding-right: 7px;
+    }
+    .blogs{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 26px;
+        grid-column-gap: 20px;
+    }
+    .blog-info {
+        margin-left: 9px;
+    }
+    
+    /* Latest Course Style */
+    
+    #uniqe-title {
+        padding-left: 30px;
+    }
+    .courses{
+        display: flex;
+        justify-content: normal;
+        justify-content: space-around;
+    }
+    .course{
+        width: 26%;
+        background-color: #faf6f6;
+        padding: 15px;
+        border-radius: 20px;
+        box-shadow: 1px 1px 7px rgb(201, 198, 198);
+    }
+    .course img {
+        width: 100%;
+        height: 150px;
+    }
 }
